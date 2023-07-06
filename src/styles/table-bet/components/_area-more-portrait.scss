@@ -1,0 +1,143 @@
+.bet-area-more {
+    $col: 7.26666666667em;
+    $row: 5em;
+
+    width: $col * 12 + $gap * 11;
+    height: $row * 15 + $gap * 14;
+
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, $col));
+    grid-template-rows: repeat(15, minmax(0, $row));
+    gap: $gap;
+
+    &>button {
+        &.bet-3-blue {
+            grid-column: 1 / span 3;
+            grid-row: 1 / span 2;
+        }
+
+        &.bet-3-red {
+            grid-column: 4 / span 3;
+            grid-row: 1 / span 2;
+        }
+
+        &.bet-3-yellow {
+            grid-column: 7 / span 3;
+            grid-row: 1 / span 2;
+        }
+
+        &.bet-2-blue {
+            grid-column: 1 / span 3;
+            grid-row: 3 / span 2;
+        }
+
+        &.bet-2-red {
+            grid-column: 4 / span 3;
+            grid-row: 3 / span 2;
+        }
+
+        &.bet-2-yellow {
+            grid-column: 7 / span 3;
+            grid-row: 3 / span 2;
+        }
+
+        &.bet-1-blue {
+            grid-column: 1 / span 3;
+            grid-row: 5 / span 2;
+        }
+
+        &.bet-1-red {
+            grid-column: 4 / span 3;
+            grid-row: 5 / span 2;
+        }
+
+        &.bet-1-yellow {
+            grid-column: 7 / span 3;
+            grid-row: 5 / span 2;
+        }
+
+        &.bet-any-triple-color {
+            grid-column: 10 / span 3;
+            grid-row: 1 / span 2;
+        }
+
+        &.bet-any-double-color {
+            grid-column: 10 / span 3;
+            grid-row: 3 / span 2;
+        }
+
+        &.bet-3-star {
+            grid-column: 10 / span 3;
+            grid-row: 5 / span 2;
+        }
+
+        &.bet-1-1-blue {
+            grid-column: 1 / span 2;
+            grid-row: 7 / span 2;
+        }
+
+        &.bet-2-2-blue,
+        &.bet-3-3-blue,
+        &.bet-4-4-blue,
+        &.bet-5-5-blue,
+        &.bet-6-6-blue {
+            grid-column: span 2;
+            grid-row: 7 / span 2;
+        }
+
+        &.bet-1-1-red {
+            grid-column: 1 / span 2;
+            grid-row: 9 / span 2;
+        }
+
+        &.bet-2-2-red,
+        &.bet-3-3-red,
+        &.bet-4-4-red,
+        &.bet-5-5-red,
+        &.bet-6-6-red {
+            grid-column: span 2;
+            grid-row: 9 / span 2;
+        }
+
+        &.bet-1-1-yellow {
+            grid-column: 1 / span 2;
+            grid-row: 11 / span 2;
+        }
+
+        &.bet-2-2-yellow,
+        &.bet-3-3-yellow,
+        &.bet-4-4-yellow,
+        &.bet-5-5-yellow,
+        &.bet-6-6-yellow {
+            grid-column: span 2;
+            grid-row: 11 / span 2;
+        }
+
+        &.bet-on-1,
+        &.bet-on-2,
+        &.bet-on-3,
+        &.bet-on-4,
+        &.bet-on-5,
+        &.bet-on-6 {
+            grid-column: span 2;
+            grid-row: 13 / span 2;
+        }
+    }
+
+    .bet-footer {
+        position: relative;
+        min-width: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 0.75em;
+        padding: 0;
+        color: #fff;
+
+        background-color: #1C49A8;
+        box-shadow:
+            inset 0 0 1em 0 rgba(0, 0, 0, 0.4);
+
+        grid-row: 15;
+        grid-column: span 4;
+    }
+}

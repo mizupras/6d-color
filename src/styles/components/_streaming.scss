@@ -1,0 +1,69 @@
+.streaming {
+    position: absolute;
+    z-index: $layer-streaming;
+}
+
+.loading-video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.loading-video-background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.loading-video-content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    @include flex(center, flex-start);
+
+    .loading-video-text {
+        font-size: 3em;
+        margin-top: 8em;
+        color: red;
+    }
+}
+
+.streaming-background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.streaming-iframe {
+    position: absolute;
+    border: none;
+    outline: none;
+    background-color: white;
+    width: 100%;
+    height: 100%;
+
+    visibility: hidden;
+
+    &.show {
+        visibility: visible;
+    }
+}
+
+.landscape {
+    .streaming {
+        top: 7em;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+}
+
+.portrait {
+    .streaming {
+        top: 8.5em;
+        height: 45.5em;
+        left: 0;
+        right: 0;
+    }
+}

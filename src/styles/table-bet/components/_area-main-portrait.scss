@@ -1,0 +1,136 @@
+.bet-area-main {
+    $col: 2.2em;
+    $row: 5em;
+
+    width: $col * 28 + $gap * 27;
+    height: $row * 16 + $gap * 15;
+
+    display: grid;
+    grid-template-columns: repeat(28, minmax(0, $col));
+    grid-template-rows: repeat(16, minmax(0, $row));
+    gap: $gap;
+
+    >button {
+        &.bet-small {
+            grid-column: 1 / span 7;
+            grid-row: 1 / span 2;
+        }
+
+        &.bet-odd {
+            grid-column: 1 / span 7;
+            grid-row: 3 / span 2;
+        }
+
+        &.bet-big {
+            grid-column: 22 / span 7;
+            grid-row: 1 / span 2;
+        }
+
+        &.bet-even {
+            grid-column: 22 / span 7;
+            grid-row: 3 / span 2;
+        }
+
+        &.bet-any-double {
+            grid-column: 1 / span 14;
+            grid-row: 11 / span 2;
+        }
+
+        &.bet-any-triple {
+            grid-column: 15 / span 14;
+            grid-row: 11 / span 2;
+        }
+
+        &.bet-staright {
+            grid-column: 8 / span 14;
+            grid-row: 1 / span 2;
+        }
+
+        &.bet-staright-flush {
+            grid-column: 8 / span 14;
+            grid-row: 3 / span 2;
+        }
+
+        &.bet-1-1 {
+            grid-column: 1 / span 7;
+            grid-row: 5 / span 2;
+        }
+
+        &.bet-2-2 {
+            grid-column: 8 / span 7;
+            grid-row: 5 / span 2;
+        }
+
+        &.bet-3-3 {
+            grid-column: 1 / span 7;
+            grid-row: 7 / span 2;
+        }
+
+        &.bet-4-4 {
+            grid-column: 8 / span 7;
+            grid-row: 7 / span 2;
+        }
+
+        &.bet-5-5 {
+            grid-column: 1 / span 7;
+            grid-row: 9 / span 2;
+        }
+
+        &.bet-6-6 {
+            grid-column: 8 / span 7;
+            grid-row: 9 / span 2;
+        }
+
+        &.bet-1-1-1 {
+            grid-column: 15 / span 7;
+            grid-row: 5 / span 2;
+        }
+
+        &.bet-2-2-2 {
+            grid-column: 22 / span 7;
+            grid-row: 5 / span 2;
+        }
+
+        &.bet-3-3-3 {
+            grid-column: 15 / span 7;
+            grid-row: 7 / span 2;
+        }
+
+        &.bet-4-4-4 {
+            grid-column: 22 / span 7;
+            grid-row: 7 / span 2;
+        }
+
+        &.bet-5-5-5 {
+            grid-column: 15 / span 7;
+            grid-row: 9 / span 2;
+        }
+
+        &.bet-6-6-6 {
+            grid-column: 22 / span 7;
+            grid-row: 9 / span 2;
+        }
+
+        &.bet-4,
+        &.bet-5,
+        &.bet-6,
+        &.bet-7,
+        &.bet-8,
+        &.bet-9,
+        &.bet-10 {
+            grid-column: span 4;
+            grid-row: 13 / span 2;
+        }
+
+        &.bet-11,
+        &.bet-12,
+        &.bet-13,
+        &.bet-14,
+        &.bet-15,
+        &.bet-16,
+        &.bet-17 {
+            grid-column: span 4;
+            grid-row: 15 / span 2;
+        }
+    }
+}

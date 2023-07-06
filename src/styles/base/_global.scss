@@ -1,0 +1,93 @@
+@font-face {
+    font-family: "Helvetica";
+    src: url('../assets/fonts/helvetica.woff2') format('woff2'); // url('../assets/fonts/helvetica.ttf') format('truetype');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Helvetica";
+    src: url('../assets/fonts/helvetica-bold.woff2') format('woff2'); // url('../assets/fonts/helvetica-bold.ttf') format('truetype');
+    font-weight: bold;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Helvetica";
+    background-color: black;
+    color: white;
+
+    padding: 0;
+    margin: 0;
+
+    font-size: 10px;
+    line-height: 1.5;
+}
+
+.app {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+
+    background-color: black;
+}
+
+.game-area {
+    // background-color: blue;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+button {
+    border: none;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    overflow: visible;
+    text-align: inherit;
+    outline: none;
+    cursor: pointer;
+
+    background: transparent;
+
+    /* inherit font & color from ancestor */
+    color: inherit;
+    font: inherit;
+
+    /* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
+    line-height: normal;
+
+    /* Corrects font smoothing for webkit */
+    -webkit-font-smoothing: inherit;
+    -moz-osx-font-smoothing: inherit;
+
+    /* Corrects inability to style clickable `input` types in iOS */
+    appearance: none;
+    -webkit-appearance: none;
+
+    &::-moz-focus-inner {
+        border: 0;
+        padding: 0;
+    }
+}
+
+.check-size {
+    position: absolute;
+    left: 0;
+    top: 182em;
+    z-index: 9999;
+
+    background-color: red;
+    height: 24em;
+    width: 10em;
+}

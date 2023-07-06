@@ -1,0 +1,20 @@
+.background-layer {
+    position: absolute;
+    inset: 0;
+
+    z-index: $layer-background-layer;
+}
+
+.background-layer-left,
+.background-layer-right {
+    position: absolute;
+    inset: 0;
+}
+
+.background-layer-left {
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.7) 0%, transparent 15%);
+}
+
+.background-layer-right {
+    background: linear-gradient(270deg, rgba(0, 0, 0, 0.7) 0%, transparent 15%);
+}

@@ -1,0 +1,7 @@
+.table-bet {
+    position: absolute;
+    z-index: $layer-table-bet;
+}
+
+@import '../table-bet/table-bet-landscape';
+@import '../table-bet/table-bet-portrait';

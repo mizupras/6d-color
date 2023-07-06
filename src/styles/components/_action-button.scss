@@ -1,0 +1,42 @@
+.action-button {
+    position: absolute;
+    z-index: $layer-action-button;
+}
+
+.action-button-item-icon {
+    width: 100%;
+    height: 100%;
+}
+
+.landscape {
+    .action-button {
+        right: 4em;
+        bottom: 10em;
+
+        @include flex(center, center, column);
+        gap: 4em;
+    }
+
+    .action-button-item {
+        // background-color: red;
+        width: 9em;
+        height: 9em;
+    }
+}
+
+.portrait {
+    .action-button {
+        right: 3em;
+        top: calc(194em - 4em);
+
+        // top 182 bottom 216
+
+        @include flex(space-between, center);
+        gap: 1em;
+    }
+
+    .action-button-item {
+        width: 20em;
+        height: 12em;
+    }
+}

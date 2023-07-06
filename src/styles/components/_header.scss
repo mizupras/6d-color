@@ -1,0 +1,58 @@
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    z-index: $layer-header;
+}
+
+.header-background {
+    width: 100%;
+    height: 100%;
+}
+
+.header-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+
+    @include flex(space-between, center);
+}
+
+.header-box {
+    @include flex;
+    gap: 0.5em;
+}
+
+.landscape {
+    .header {
+        height: 7em;
+    }
+
+    .header-container {
+        padding-left: 5em;
+        padding-right: 5em;
+    }
+
+    .header-box {
+        font-size: $font-normal-landscape;
+    }
+}
+
+.portrait {
+    .header {
+        height: 8.5em;
+    }
+
+    .header-container {
+        padding-left: 4em;
+        padding-right: 4em;
+    }
+
+    .header-box {
+        font-size: $font-normal-portrait;
+    }
+}
